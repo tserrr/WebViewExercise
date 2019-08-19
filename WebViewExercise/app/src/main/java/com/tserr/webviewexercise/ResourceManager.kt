@@ -4,11 +4,15 @@ import android.content.Context
 
 class ResourceManager (private val context: Context) {
 
+    var nativeColorResId = R.color.colorNativeButtonClickedRed
+
+    var webColorResId = R.color.colorWebButtonClickedRed
+
     val nativeColorInt: Int
-        get() = context.getColor(R.color.colorNativeButtonClickedRed)
+        get() = context.getColor(nativeColorResId)
 
     val webColorInt: Int
-        get() = context.getColor(R.color.colorWebButtonClickedRed)
+        get() = context.getColor(webColorResId)
 
     val nativeColorString: String
         get() = String.format("#%06X", 0xFFFFFF and nativeColorInt)
